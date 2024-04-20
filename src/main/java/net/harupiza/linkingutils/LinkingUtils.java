@@ -13,10 +13,10 @@ public class LinkingUtils implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+		LOGGER.info("Entry point: main loaded");
+	}
 
-		LOGGER.info("Hello Fabric world!");
+	public static boolean coinToss() {
+        return !(Math.random() < 0.5);
 	}
 }
